@@ -1,0 +1,13 @@
+.contactButton {
+    cursor: pointer;
+    background-color: #3aaa35;
+    border-radius: 30px;
+    height: fit-content;
+    width: 190px;
+    padding-bottom: 0.4375rem;
+    padding-top: 0.4375rem;
+
+    &:hover {
+        background-color: #20682c;
+    }
+}

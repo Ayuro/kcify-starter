@@ -1,0 +1,167 @@
+/** Variables **/
+$background-color-hover: #20682c;
+$background-card: rgba(255, 255, 255, 0.95);
+$shadow-color: #00000029;
+$gray-800: #4a4a4a;
+$accent-bright: #00aaff;
+$font-weight-semibold: 600;
+$support-circle-radius-sm: 80px;
+$support-circle-radius-md: 120px;
+$connection-additional-space: 80px;
+
+/** Login Page **/
+#kc-login {
+    background-color: #3aaa35;
+
+    &:hover {
+        background-color: $background-color-hover;
+    }
+}
+
+.kcFormCardClass {
+    background: $background-card;
+    border-radius: 50%;
+    box-shadow: 0px 3px 6px $shadow-color;
+    display: flex;
+    flex: 486px 0 0;
+    flex-wrap: wrap;
+    height: 486px;
+    justify-content: center;
+    padding: 2rem 2rem 1rem;
+    position: relative;
+    top: 4rem;
+    z-index: 10;
+}
+
+.page-user-login {
+    .layout-main-wrapper {
+        background-color: #f0f0f0; // Replace $secondary-light with the actual color
+        display: flex;
+        justify-content: center;
+    }
+
+    .form {
+        &-connect {
+            background: #ffffff; // Replace $background-circle with the actual color
+            border-radius: 50%;
+            box-shadow: 0px 3px 6px $shadow-color;
+            display: flex;
+            flex: 486px 0 0;
+            flex-wrap: wrap;
+            height: 486px;
+            justify-content: center;
+            padding: 2rem 2rem 1rem;
+            position: relative;
+            top: 4rem;
+            z-index: 10;
+        }
+
+        &-title {
+            flex-basis: 100%;
+            font-size: 1.8rem;
+            margin: 0;
+            text-align: center;
+        }
+
+        &-login {
+            width: 75%;
+        }
+
+        &-control {
+            background-image: none;
+            border-bottom-width: 1px;
+            transform: none;
+
+            &:focus,
+            &:not(:placeholder-shown) {
+                ~ .form-required {
+                    opacity: .65;
+                    transform: scale(.7) translateY(-.8rem) translateX(.15rem);
+                }
+            }
+        }
+
+        &-floating {
+            margin: .7rem 0;
+
+            > .form-required {
+                opacity: 1;
+                transform: scale(1) translateY(0) translateX(0);
+            }
+        }
+
+        &-required {
+            font-size: 1.5rem;
+
+            &::after {
+                background-image: url('../images/icons/required.svg');
+            }
+        }
+
+        &-forgotten-link {
+            font-size: .8rem;
+            padding-top: .5rem;
+            text-align: right;
+            width: 100%;
+
+            a {
+                color: $gray-800;
+            }
+        }
+
+        &-check {
+            align-items: end;
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+
+            &-input {
+                border-radius: 0;
+                border-color: $gray-800;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            &-label {
+                color: $gray-800;
+                margin-left: .5rem;
+            }
+        }
+
+        &-wrapper-submit {
+            margin: 0;
+        }
+
+        &-submit {
+            font-size: 1.2rem;
+            width: 100%;
+        }
+
+        &-register {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &-intro {
+                color: $gray-800;
+                flex-basis: 100%;
+                font-size: .8rem;
+                line-height: .8rem;
+                text-align: center;
+            }
+
+            &-link {
+                color: $accent-bright;
+                font-weight: $font-weight-semibold;
+            }
+        }
+    }
+
+    .site-footer {
+        margin-top: $support-circle-radius-sm + $connection-additional-space;
+
+        @media (min-width: 768px) {
+            margin-top: $support-circle-radius-md + $connection-additional-space;
+        }
+    }
+}
